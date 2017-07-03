@@ -1,12 +1,9 @@
 'use strict';
 
 module.exports = function(grunt) {
-
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-
   grunt.initConfig({
-
     pkg: grunt.file.readJSON('package.json'),
 
     /* LESS
@@ -69,14 +66,11 @@ module.exports = function(grunt) {
         tasks: ['compile']
       }
     }
-
   });
-
 
   /* GRUNT TASKS
   ================================================================= */
   grunt.registerTask('default', ['compile']);
   grunt.registerTask('compile', ['less', 'postcss']);
   //grunt.registerTask('compile', ['sass', 'postcss']); // uncomment for Sass compilation
-
 };
